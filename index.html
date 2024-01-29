@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Gochi+Hand&family=Montaga&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-900">
+        <h1 class="text-white font-[orbitron] mt-40 mb-8 text-4xl justify-center text-center animate-pulse md:text-[60px]">
+            GERADOR DE SENHA
+        </h1>
+        <div class="text-white m-5 justify-center text-center flex flex-col">
+            <span class="md:text-2xl">Tamanho de <span id="valor">25</span> caracteres</span>
+            <input class="m-auto mt-8 mb-3 w-[300px] appearance-none rounded-sm bg-slate-100 outline-none md:w-[500px]" id="slider" type="range" min="6" max="25" value="15">
+            <input class="bg-[#2AB791] m-auto  h-8 text-white font-[orbitron] w-[300px] justify-center text-center rounded-sm cursor-pointer hover:scale-105 transition-transform duration-500 md:w-[500px] " 
+            type="button" 
+            value="Gerar senha" 
+            id="ger"
+            onclick="gerar()">
+        </div>
+        <div id="container" onclick="copypass()" class="flex flex-col text-white justify-center text-center hidden">
+            <span class="">
+                Sua senha gerada foi:
+            </span>
+            <span class="bg-black text-lg w-[300px] h-10 p-[6px] m-auto mt-3 rounded-md border border-white border-opacity-30 cursor-pointer hover:scale-105 transition-transform duration-500" id="password">
+                
+            </span>
+            <span class="bg-black text-xs w-[250px] h-[28px] p-[5.5px] m-auto mt-3 rounded-md">
+                Clique na senha para copiar! 👆
+            </span>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
